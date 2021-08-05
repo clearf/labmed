@@ -26,7 +26,7 @@ do
 
   echo $OUTPUT > ${NAME}_result.html
 
-  if [ $(echo $OUTPUT | grep -o "Awaiting result" | wc -l) -ne 2 ] && [ $(echo $OUTPUT | grep -c "Redirecting") -ne 1 ] && \
+  if [ $(echo $OUTPUT | grep -o "Awaiting result" | wc -l) -ne 4 ] && [ $(echo $OUTPUT | grep -c "Redirecting") -ne 1 ] && \
     [ $(echo $OUTPUT | grep -ic "processing") -ne 1 ] ; then  
     echo -ne "\n\007Change found for ${NAME}: https://securelink.labmed.uw.edu/?code=${CODE}&dob=${DOB}\n"; 
   else echo -ne '.'; 
